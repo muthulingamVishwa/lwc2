@@ -1,0 +1,19 @@
+<template>
+    <!-- View Mode: clicking the div toggles to edit mode -->
+    <template if:true={isViewMode}>
+        <div class="view-mode" onclick={toggleEdit}>
+            {value}
+        </div>
+    </template>
+
+    <!-- Edit Mode: show the textarea for inline editing -->
+    <template if:false={isViewMode}>
+        <lightning-textarea 
+            label="Data" 
+            variant="label-hidden"
+            value={value}
+            onchange={handleChange}
+            onblur={saveEdit}>
+        </lightning-textarea>
+    </template>
+</template>

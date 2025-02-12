@@ -1,0 +1,6 @@
+.view-mode {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    min-height: 2rem;
+    cursor: pointer;
+}

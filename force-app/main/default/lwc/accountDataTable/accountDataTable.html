@@ -1,0 +1,15 @@
+<template>
+   <lightning-card title="Account" icon-name="standard:account">
+       <div class="slds-m-around_medium">
+           <c-custom-type-data
+               key-field="Id"
+               data={Accountdata}
+               onsave={handleSave}
+               columns={columns}
+               oncustomcellchange={datachange}
+               draft-values={draftValues} 
+               hide-checkbox-column="true">
+           </c-custom-type-data>
+       </div>
+   </lightning-card>
+</template>
